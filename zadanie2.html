@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       const trasa=prompt('Podaj przebytą trasę');
+       const cena=prompt('Podaj cene paliwa');
+       const palenie=prompt('Podaj palenie samochodu na 100km');
+       document.write('Cena za paliwo na przejechanej trasie wynosi : ' + (trasa*(palenie/100) *cena).toFixed(2) );
+
+    </script>
+</body>
+</html>
