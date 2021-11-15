@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    alert("Podaj dwie liczby");
+    const a = prompt("Podaj pierwszą liczbę");
+    const b = prompt("Podaj drugą liczbę")
+    const c = prompt("Podaj jeszcze jedną liczbę")
+    if((c<a && c>b) || (c>a && c<b))
+    {
+        document.writeln(`Liczba   jest w przedziale ${a} i ${b}`);
+    }
+    else
+    {
+        document.writeln(`Liczba ${c} nie jest w przedziale liczb ${a} i ${b} `);
+    }
+    </script>
+</body>
+</html>
