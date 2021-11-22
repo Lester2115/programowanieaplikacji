@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Wpisz jaki działanie chcesz wykonać wpisując jedno z podanych : + - * /
+    <form action="" method="POST">
+
+        <input type="text" name="znk" placeholder="znak">
+        <input type="number" name="liczba1" placeholder="Wpisz pierwszą liczbę ">
+        <input type="number" name="liczba2" placeholder="Wpisz drugą liczbę "> 
+        <input type="submit" value="Oblicz">       
+     </form>    
+ 
+     <div class="wynik"></div>
+    
+     <script>
+       const formularz = document.querySelector('form');
+       const skutek = document.querySelector('.wynik'); 
+       
+    formularz.addEventListener('submit', (e)=>{
+           e.preventDefault();
+           const znak = document.querySelector('input[name="znk"]');
+           const l1= document.querySelector('input[name="liczba1"]')*1;
+           const l2= document.querySelector('input[name="liczba2"]')*1;
+       if(znak==`+`)     
+       {
+           const suma=l1+l2;
+           skutek.textContent = `Suma liczb ${l1} i ${l2} wynosi ${suma} `;
+       }
+       
+       else if(znak=="-")
+       {
+       
+           const roznica=l1-l2;
+           skutek.textContent = `Różnica liczb ${l1} i ${l2} wynosi ${roznica} `;
+       }   
+       
+
+       else if(znak=="*")
+       {
+           const iloczyn=l1*l2;
+           skutek.textContent = `Iloczyn liczb ${l1} i ${l2} wynosi ${iloczyn} `;  
+       } 
+
+       else if(znak=="/")
+       {
+           const iloraz=l1/l2;
+           skutek.textContent = `Iloraz liczb ${l1} i ${l2} wynosi ${iloraz} `;   
+       } 
+       else
+       {
+        skutek.textContent = `Podano zły znak `;  
+       }
+       })
+     </script>
+</body>
+</html>
