@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+      <script>
+       const l1 = prompt("Podaj liczbe")*1;
+       const l2 = prompt("podaj drugą liczbe" )*1;
+       
+       for(let i=0; i<=l1-1; i++)
+       {
+           document.write("*");
+       }
+       document.write("<br>");
+       for(let i=0;i<=l2-3;i++ )
+       {   
+           
+           document.write ("*");
+           for (let j = 0; j< l1-1 ;j++)
+           {
+              document.write("&nbsp;&nbsp");
+           } 
+           document.write("* <br>");
+       }
+       for(let i=0; i<l1; i++)
+       {
+           document.write("*");
+       }
+    </script>
+</body>
+</html>
