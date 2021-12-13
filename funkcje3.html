@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method ="post">
+       <input type="number" name="l1" placeholder="Wpisz pierwszą liczbę ">
+       <input type="number" name="l2" placeholder="Wpisz drugą liczbę "> 
+       <input type="submit" value="Oblicz">   
+    </form>
+    
+    <div class = "wynik">
+
+    </div>
+
+    <script>
+        const formularz = document.querySelector('form');
+        const skutek = document.querySelector('.wynik');  
+        
+        function dodawanie(a,b){return a+b;}
+        function potega(c){return Math.pow(c,3);}
+
+        formularz.addEventListener('submit' , (e) => {
+        
+        e.preventDefault();
+        const l1 = document.querySelector('input[name="l1"]').value * 1;
+        const l2 = document.querySelector('input[name="l2"]').value * 1;
+       
+
+        skutek.textContent = dodawanie(potega(l1),potega(l2));
+
+        })  ;
+        
+        
+    </script>
+</body>
+</html>

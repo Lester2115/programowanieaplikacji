@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="POST">
+
+       <input type="number" name="liczba1" placeholder="Wpisz pierwszą liczbę ">
+       <input type="number" name="liczba2" placeholder="Wpisz drugą liczbę "> 
+       <input type="submit" value="Oblicz">       
+    </form>    
+
+    <div class="wynik"></div>
+   
+    <script>
+      
+      const formularz = document.querySelector('form');
+      const skutek = document.querySelector('.wynik');  
+      function silnia (a) {
+          const s = 1;
+          for(let i=1; i<=a ; i++)
+          {
+              s*= i;
+          }
+          return s;
+      }
+      
+      function symbolNewtona(a,b)
+      {
+       const symbol = silnia(a) / (silnia(b) * silnia(a-b));
+       return symbol;
+      }
+
+      formularz.addEventListener('submit', (e)=>{        
+          e.preventDefault();
+          
+          const l1= document.querySelector('input[name="liczba1"]').value*1;
+          const l2= document.querySelector('input[name="liczba2"]').value*1;
+
+          if(l1 > l2 && 0 < l2 && l1<=12)
+          {
+          skutek.textContent = symbolNewtona(l1,l2);
+          }
+          else
+          {
+          skutek.textContent = "Liczby nie spełniają wymagań : l1> l2 lub l2 >0 lub l1 <= 12";
+          }
+      }); 
+    </script>
+</body>
+</html>
