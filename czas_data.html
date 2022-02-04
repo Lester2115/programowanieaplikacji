@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="zegarek"></div>
+
+    <script>
+        const divZ = document.querySelector(`.zegarek`);
+        //tworzymy nowy obiekt przechowujący date i czas
+       
+
+
+        function czasy()
+        {
+        
+        const czas = new Date();
+        let godziny =czas.getHours();
+        let minuty = czas.getMinutes();
+        let sekundy = czas.getSeconds();
+
+        if(godziny <10 )godziny  = '0' + godziny;
+        if(minuty <10 )minuty  = '0' + minuty;
+        if(sekundy <10 )sekundy = '0' + sekundy;
+
+        divZ.textContent= (`${godziny} : ${minuty} : ${sekundy}`);
+        }
+        czasy();
+        setInterval(czasy,1000)
+        //setTimeout(nazwafunkcji, czas)- wywołuje funkcje po czasie czas milisekundy
+
+        //setInterval(nazwafunkcji, czas) - wywołuje funkcje nazwafunckji co podany czas w milisekundach
+    </script>
+</body>
+</html>
