@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Sebastian Mordarski zadanie 3
+
+        function silnia(liczba)
+        {
+            let silnia=1;
+            for(let i=1;i<=liczba;i++)
+            {
+            silnia *= i;
+            }
+
+            return 'Silnia liczby ' + liczba + ' jest równa ' + silnia;
+        }
+
+        alert(silnia(4));
+        alert(silnia(2));
+    </script>
+</body>
+</html>
