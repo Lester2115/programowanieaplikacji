@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type="checkbox" name="wybor" value="Jest"> Jest
+        <input type="checkbox" name="wybor" value="Nie jest"> Nie jest
+        <input type="checkbox" name="wybor" value="Może ?"> Może ?
+        <input type="checkbox" name="wybor" value="Jednak nie"> Jednka nie 
+        <input type="checkbox" name="wybor" value="wtf"> wtf
+
+        <input type="button" name="guzior">
+
+        <div></div>
+
+        <script>
+            let wybor=document.querySelectorAll('input[name="wybor"]');
+            let guzior = document.querySelector('input[name="guzior"]');
+            let divv = document.querySelector('div');
+
+            guzior.addEventListener('click', function(e){
+
+              for(let i=0; i<5;i++)
+              {
+               if(wybor[i].checked == true){
+                   divv.textContent += wybor[i].value + "\t";
+               }
+              }
+            });
+        </script>
+    </form>
+</body>
+</html>

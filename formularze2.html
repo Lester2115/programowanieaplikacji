@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form>
+        <input type="text" name="tekst">
+        <input type="button" name="guzior">
+    </form>
+
+    <div>
+
+    </div>
+
+    <script>
+        let divv= document.querySelector('div');
+
+        let guzik= document.querySelector('input[name="guzior"]');
+
+        let tekst = document.querySelector('input[name="tekst"]');
+
+        guzik.addEventListener('click', function(e){
+          divv.textContent += tekst.value;
+        });
+    </script>
+</body>
+</html>
