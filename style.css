@@ -1,0 +1,58 @@
+div{
+    text-align: center;
+   
+    /* background-image: url("essa.jpg"); */
+
+}
+
+img{
+    width: 150px;
+    height: 50px;
+}
+body{
+    margin-right: auto;
+    margin-left: auto;
+}
+#trzeci{
+    font-variant-caps:small-caps ;
+}
+#czwarty{
+    color: blue;
+    font-weight: 500;
+}
+#szesc{
+    font-family: Verdana, Tahoma, Arial;
+}
+#siedem{
+    font-size: xx-large;
+}
+#osiem{
+    text-decoration: line-through;
+    color: green;
+}
+#dziewiec{
+    text-decoration: underline;
+}
+#dziesiec{
+    text-decoration: line-through;
+}
+#jedenascie{
+    word-spacing: 70px;
+}
+#dwana{
+    letter-spacing: 10px;
+}
+#akapit5{
+    padding: 10px;
+    text-align: justify;
+    height: 900px;
+}
+#rozmiar{
+    height: 900px;
+}
+#cw12{
+    float: left;
+    width: 150px;
+    height: 50px;
+    border: 1px solid black;
+}
